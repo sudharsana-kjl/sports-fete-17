@@ -17,3 +17,7 @@ $app->get('/', function () use ($app) {
 $app->get('/key',function(){
   return str_random(32);
 });
+
+//API routes
+$app->get('/api/events','EventsController@GetEvents');
+$app->get('/api/scores','ScoresController@GetScores');
